@@ -1,0 +1,45 @@
+CREATE DATABASE STUD;
+
+USE STUD;
+
+Create table student (
+roll_no int primary key,
+name varchar(50),
+grade varchar(10),
+marks int not null,
+city varchar(50)
+);
+
+insert into student
+(roll_no,name,grade,marks,city)
+values
+(101,"SHIVAM","C",70,"PUNE"),
+(102,"RAHUL","A",93,"MUMBAI"),
+(103,"CHETAN","B",85,"MUMBAI"),
+(104,"DHRUV","A",96,"DELHI"),
+(105,"RANI","F",12,"DELHI"),
+(106,"FARAH","B",82,"DELHI");
+
+select * from student;
+
+
+#where clause........
+
+select * from student where marks>80;
+
+select * from student where marks>75 and city='MUMBAI';	
+
+select distinct city from student;
+
+select name from student;
+
+
+#ARITHMETIC OPERATORS..
+
+select * from student where marks+10>100;
+
+select * from student where marks+20>50;
+
+select * from student where marks-10>50;
+
+select * from student where marks*10>50;
